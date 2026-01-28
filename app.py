@@ -1,7 +1,12 @@
+# app.py
+
 import streamlit as st
-from planner import planner_agent
-from search_agent import search_agent
-from writer_agent import writer_agent
+import json
+from datetime import datetime
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
+
+from graph import build_graph
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
@@ -9,71 +14,109 @@ st.set_page_config(
     layout="wide"
 )
 
-# ---------------- GLOBAL UI STYLE ----------------
-st.markdown("""
-<style>
-body {
-    background-color: #fafafa;
-}
-.header-title {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 4px;
-}
-.header-subtitle {
-    text-align: center;
-    font-size: 16px;
-    color: #6b7280;
-    margin-bottom: 35px;
-}
-</style>
-""", unsafe_allow_html=True)
-
 # ---------------- HEADER ----------------
-st.markdown("<div class='header-title'>Research Analysis System</div>", unsafe_allow_html=True)
-st.markdown("<div class='header-subtitle'>Planner → Search → Writer (Academic Pipeline)</div>", unsafe_allow_html=True)
-
-# ---------------- INPUT ----------------
-topic = st.text_input(
-    "Enter Research Topic",
-    placeholder="e.g., The Emergence of Agentic AI and Ethical Accountability"
+st.markdown("<h1 style='text-align:center;'>Academic Research Assistant</h1>", unsafe_allow_html=True)
+st.markdown(
+    "<p style='text-align:center;color:gray;'>Planner → Search → Writer (LangGraph)</p>",
+    unsafe_allow_html=True
 )
 
-generate = st.button("Generate Research Report")
+# ---------------- MEMORY SETUP ----------------
+MEMORY_FILE = "memory.json"
+
+if "history" not in st.session_state:
+    try:
+        with open(MEMORY_FILE, "r", encoding="utf-8") as f:
+            st.session_state.history = json.load(f)
+    except:
+        st.session_state.history = []
+
+# ---------------- USER INPUT ----------------
+topic = st.text_input(
+    "Enter Research Topic",
+    placeholder="e.g., Impact of Artificial Intelligence on Education"
+)
+
+generate = st.button("Generate Research")
 
 # ---------------- MAIN PIPELINE ----------------
 if generate:
+
     if not topic.strip():
-        st.warning("Please enter a valid research topic.")
+        st.warning("⚠️ Please enter a valid research topic.")
         st.stop()
 
-    # -------- STEP 1: PLANNER (VISIBLE) --------
-    st.subheader("Planner Agent Output")
-    planner_output = planner_agent(topic)
-    st.markdown(planner_output)
+    initial_state = {
+        "topic": topic,
+        "questions": [],
+        "research_data": [],
+        "report": ""
+    }
 
-    questions = [
-        q.split('.', 1)[1].strip()
-        for q in planner_output.split("\n")
-        if q.strip() and q[0].isdigit()
-    ]
+    graph = build_graph()
 
-    # -------- STEP 2: SEARCH (HIDDEN) --------
-    all_research_data = []
-    for question in questions:
-        search_results = search_agent(question)
-        all_research_data.append({
-            "question": question,
-            "results": search_results["results"]
-        })
+    planner_container = st.container()
+    writer_container = st.container()
 
-    # -------- STEP 3: WRITER --------
-    st.subheader("Final Research Report")
+    with st.spinner("🤖 Agents are working..."):
+        # stream() yields dictionaries like {"node_name": {state_updates}}
+        for output in graph.stream(initial_state):
+            
+            # 1. Handle Planner Output immediately
+            if "planner" in output:
+                with planner_container:
+                    st.markdown("## 🧠 Planner Output (Generated Questions)")
+                    questions = output["planner"].get("questions", [])
+                    if questions:
+                        for q in questions:
+                            st.write(f"- {q}")
+                    else:
+                        st.info("No questions generated.")
 
-    with st.spinner("Synthesizing scholarly literature and generating report..."):
-        report = writer_agent(topic, all_research_data)
+            # 2. Handle Writer Output (Final Report)
+            if "writer" in output:
+                final_report = output["writer"].get("report", "")
+                with writer_container:
+                    st.markdown("## ✍️ Generated Research Report")
+                    st.markdown(final_report)
+                    
+                    # Store for download button outside loop
+                    st.session_state.last_report = final_report
 
-    # -------- FINAL RENDER (PURE MARKDOWN) --------
-    st.markdown(f"# **{topic}**")   # BIG, BOLD TITLE
-    st.markdown(report)
+    # If report was generated, show download and save
+    if "last_report" in st.session_state and st.session_state.last_report:
+        st.download_button(
+            label="📄 Download Report (.txt)",
+            data=st.session_state.last_report,
+            file_name=f"{topic.replace(' ', '_')}.txt",
+            mime="text/plain"
+        )
+
+        # -------- SAVE TO MEMORY ----------
+        entry = {
+            "topic": topic,
+            "report": st.session_state.last_report,
+            "timestamp": str(datetime.now())
+        }
+
+        st.session_state.history.append(entry)
+
+        with open(MEMORY_FILE, "w", encoding="utf-8") as f:
+            json.dump(st.session_state.history, f, indent=2)
+
+# ---------------- PAST REPORTS ----------------
+st.markdown("---")
+st.markdown("## 🗂️ Past Research Reports")
+
+if st.session_state.history:
+    for i, item in enumerate(reversed(st.session_state.history), 1):
+        with st.expander(f"{i}. {item['topic']} ({item['timestamp']})"):
+            st.markdown(item["report"])
+            st.download_button(
+                label="Download (.txt)",
+                data=item["report"],
+                file_name=f"{item['topic'].replace(' ', '_')}.txt",
+                mime="text/plain"
+            )
+else:
+    st.info("No past research reports yet.")
