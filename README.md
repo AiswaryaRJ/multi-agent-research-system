@@ -1,54 +1,77 @@
-\# Multi-Agent Research System (Planner → Search → Writer)
+# Multi-Agent Research System
 
+A multi-agent academic research assistant built using an agentic AI architecture.
 
+The system decomposes research tasks into planning, information retrieval, and scholarly synthesis through specialized agents.
 
-\## Overview
+## Architecture
 
-This project implements a multi-agent academic research assistant using an agentic architecture.
+Planner Agent → Search Agent → Writer Agent
 
-It decomposes research into planning, information retrieval, and scholarly synthesis.
+## Agents
 
+### Planner Agent
 
+* Generates university-level research questions
+* Ensures topic coverage and depth
+* Creates a structured research plan
 
-\## Agents
+### Search Agent
 
-\### Planner Agent
+* Retrieves relevant information for each research question
+* Collects evidence and supporting content
+* Organizes retrieved information
 
-\- Generates advanced, university-level research questions
+### Writer Agent
 
-\- Ensures depth, coverage, and academic rigor
+* Produces academic summaries
+* Synthesizes information from multiple sources
+* Generates a final research report
 
+## Features
 
+* Multi-agent workflow
+* Automated research planning
+* Information retrieval pipeline
+* Academic report generation
+* Modular agent architecture
 
-\### Search Agent
+## Technologies Used
 
-\- Retrieves relevant evidence for each research question
+* Python
+* Streamlit
+* Git
+* GitHub
 
-\- Supplies structured content for synthesis
+## Project Structure
 
+```text
+app.py
+planner.py
+search_agent.py
+graph.py
+agents_tools.py
+requirements.txt
+```
 
+## Execution
 
-\### Writer Agent
-
-\- Produces question-wise academic summaries
-
-\- Generates a final professional research report
-
-
-
-\## Pipeline
-
-Planner → Search → Writer
-
-
-
-\## Execution
-
-\### CLI
+### Run the application
 
 ```bash
+python demo_full_pipeline.py
+```
 
-python demo\_full\_pipeline.py
+## Learning Outcomes
 
+* Agentic AI systems
+* Multi-agent orchestration
+* Python application development
+* Workflow automation
+* Research automation
 
+## Author
 
+Aiswarya Rose Jacob
+
+Developed during the Infosys Springboard Virtual Internship.
