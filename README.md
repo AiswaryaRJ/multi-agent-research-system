@@ -1,47 +1,53 @@
 <div align="center">
 
-# Aiswarya Rose Jacob
-### AI & Machine Learning · Systems Development
+<!-- animated header SVG — replace with your repo's animated SVG file -->
+<!-- See: https://github.com/AiswaryaRJ/AiswaryaRJ/blob/main/header.svg -->
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/aiswaryarosejacob)
-[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:aiswaryarosejacob@email.com)
+# Aiswarya Rose Jacob
+
+```
+AI & Machine Learning  ·  Systems Engineering  ·  Computer Science
+```
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/aiswaryarosejacob)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:aiswaryarosejacob@email.com)
 
 </div>
 
 ---
 
-## About
+<img align="right" width="38%" src="https://github-readme-stats.vercel.app/api?username=AiswaryaRJ&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true" />
+
+### About
 
 Computer Science undergraduate specialising in the architecture of intelligent systems — bridging raw data to actionable intelligence through clean code, modular design, and rigorous application of machine learning.
 
+**Focus areas:** vector retrieval · multi-agent frameworks · production-grade Python systems
+
 ---
 
-## Technical Expertise
+### Stack
 
-| Category | Technologies |
-| :--- | :--- |
+| | |
+|---|---|
 | **Languages** | Python · SQL · C |
 | **AI / ML** | Sentence-Transformers · NumPy · Pandas · Scikit-learn |
-| **Engineering** | Streamlit · Git · SQLite |
+| **Engineering** | Streamlit · SQLite · Git |
 
 ---
 
-## Featured Projects
+### Featured Projects
 
-### [Semantic Local Search](https://github.com/AiswaryaRJ/semantic-local-search)
-*Context-aware information retrieval · transformer embeddings · cosine similarity*
+**[Semantic Local Search](https://github.com/AiswaryaRJ/semantic-local-search)**
+`transformer embeddings · cosine similarity · retrieval pipeline`
+Custom pipeline mapping text into a 384-dim vector space. Conceptual intent matching — meaning over keywords.
 
-- Custom retrieval pipeline mapping text to a 384-dimensional vector space.
-- Conceptual intent matching via cosine similarity, prioritising meaning over keywords.
-
-### [Multi-Agent Research System](https://github.com/AiswaryaRJ/multi-agent-research-system)
-*Automated workflow engine · autonomous task delegation · modular architecture*
-
-- Multi-agent framework with robust state management and autonomous delegation.
-- Modular multi-file structure designed for long-term scalability and reproducibility.
+**[Multi-Agent Research System](https://github.com/AiswaryaRJ/multi-agent-research-system)**
+`autonomous delegation · state management · modular architecture`
+Multi-agent framework with robust state management. Modular multi-file structure built for long-term scalability.
 
 ---
 
 <div align="center">
-  <sub>Building systems with precision.</sub>
+<sub><code>// building systems with precision</code></sub>
 </div>
