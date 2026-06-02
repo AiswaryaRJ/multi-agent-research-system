@@ -1,24 +1,18 @@
 <div align="center">
 
 # Aiswarya Rose Jacob
-### AI & Machine Learning Undergraduate | Systems Development
+### AI & Machine Learning · Systems Development
 
-<br>
-
-<!-- Subtle, professional animated header (use a clean geometric line-art GIF or SVG) -->
-<img src="YOUR_SUBTLE_ANIMATION_URL.gif" width="600" alt="Professional Abstract Animation" />
-
-<br>
-<br>
-
-**[LinkedIn](https://linkedin.com/in/aiswaryarosejacob)  •  [Email](mailto:aiswaryarosejacob@email.com)**
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/aiswaryarosejacob)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:aiswaryarosejacob@email.com)
 
 </div>
 
 ---
 
-## Profile Focus
-I am a Computer Science undergraduate specializing in the architecture of intelligent systems. I focus on bridging the gap between raw data and actionable intelligence through clean code, modular design, and the rigorous application of machine learning.
+## About
+
+Computer Science undergraduate specialising in the architecture of intelligent systems — bridging raw data to actionable intelligence through clean code, modular design, and rigorous application of machine learning.
 
 ---
 
@@ -26,26 +20,28 @@ I am a Computer Science undergraduate specializing in the architecture of intell
 
 | Category | Technologies |
 | :--- | :--- |
-| **Languages** | Python, SQL, C |
-| **AI/ML** | Sentence-Transformers, NumPy, Pandas, Scikit-learn |
-| **Engineering** | Streamlit, Git, SQLite, REST APIs |
+| **Languages** | Python · SQL · C |
+| **AI / ML** | Sentence-Transformers · NumPy · Pandas · Scikit-learn |
+| **Engineering** | Streamlit · Git · SQLite |
 
 ---
 
 ## Featured Projects
 
 ### [Semantic Local Search](https://github.com/AiswaryaRJ/semantic-local-search)
-*Context-aware information retrieval system.*
-* **Engineering:** Built a custom retrieval pipeline using transformer-based embeddings to map text into a 384-dimensional vector space.
-* **Mechanism:** Leveraged **Cosine Similarity** to enable conceptual matching, prioritizing intent over traditional string-matching.
+*Context-aware information retrieval · transformer embeddings · cosine similarity*
+
+- Custom retrieval pipeline mapping text to a 384-dimensional vector space.
+- Conceptual intent matching via cosine similarity, prioritising meaning over keywords.
 
 ### [Multi-Agent Research System](https://github.com/AiswaryaRJ/multi-agent-research-system)
-*Automated workflow engine for research aggregation.*
-* **Engineering:** Designed a multi-agent framework focused on autonomous task delegation and robust state management.
-* **Architecture:** Developed with a modular, multi-file structure to ensure long-term scalability and reproducibility.
+*Automated workflow engine · autonomous task delegation · modular architecture*
+
+- Multi-agent framework with robust state management and autonomous delegation.
+- Modular multi-file structure designed for long-term scalability and reproducibility.
 
 ---
 
-<p align="center">
-  <em>Building systems with precision.</em>
-</p>
+<div align="center">
+  <sub>Building systems with precision.</sub>
+</div>
