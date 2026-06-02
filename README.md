@@ -1,7 +1,24 @@
+<div align="center">
+
 # Aiswarya Rose Jacob
 ### AI & Machine Learning Undergraduate | Systems Development
 
-I am a Computer Science undergraduate focused on the design and implementation of intelligent systems. I build projects that prioritize modular architecture, conceptual data retrieval, and clean integration. My work is driven by the rigorous application of machine learning paradigms and scalable code design.
+<br>
+
+<!-- Subtle, professional animated header (use a clean geometric line-art GIF or SVG) -->
+<img src="YOUR_SUBTLE_ANIMATION_URL.gif" width="600" alt="Professional Abstract Animation" />
+
+<br>
+<br>
+
+**[LinkedIn](https://linkedin.com/in/aiswaryarosejacob)  •  [Email](mailto:aiswaryarosejacob@email.com)**
+
+</div>
+
+---
+
+## Profile Focus
+I am a Computer Science undergraduate specializing in the architecture of intelligent systems. I focus on bridging the gap between raw data and actionable intelligence through clean code, modular design, and the rigorous application of machine learning.
 
 ---
 
@@ -15,22 +32,20 @@ I am a Computer Science undergraduate focused on the design and implementation o
 
 ---
 
-## Selected Projects
+## Featured Projects
 
 ### [Semantic Local Search](https://github.com/AiswaryaRJ/semantic-local-search)
 *Context-aware information retrieval system.*
-* **Approach:** Engineered a custom retrieval pipeline utilizing transformer-based embeddings to map unstructured text into a 384-dimensional vector space.
-* **Mechanism:** Leveraged **Cosine Similarity** to enable conceptual matching, significantly improving relevance over traditional keyword-based search.
+* **Engineering:** Built a custom retrieval pipeline using transformer-based embeddings to map text into a 384-dimensional vector space.
+* **Mechanism:** Leveraged **Cosine Similarity** to enable conceptual matching, prioritizing intent over traditional string-matching.
 
 ### [Multi-Agent Research System](https://github.com/AiswaryaRJ/multi-agent-research-system)
 *Automated workflow engine for research aggregation.*
-* **Approach:** Designed a multi-agent framework in Python, focused on autonomous task delegation and robust state management.
-* **Architecture:** Structured as a modular, multi-file application to ensure scalability, reproducibility, and ease of future integration.
+* **Engineering:** Designed a multi-agent framework focused on autonomous task delegation and robust state management.
+* **Architecture:** Developed with a modular, multi-file structure to ensure long-term scalability and reproducibility.
 
 ---
 
-## Professional Presence
-[LinkedIn](https://linkedin.com/in/aiswaryarosejacob)  •  [Email](mailto:aiswaryarosejacob@email.com)
-
----
-*Building systems with precision.*
+<p align="center">
+  <em>Building systems with precision.</em>
+</p>
