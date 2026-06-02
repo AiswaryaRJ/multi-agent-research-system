@@ -1,38 +1,36 @@
 # Aiswarya Rose Jacob
-### Computer Science Undergraduate | AI & Machine Learning
+### AI & Machine Learning Undergraduate | Systems Development
 
-I am a CS undergraduate focusing on the architecture of intelligent systems. I build projects that prioritize modular design, conceptual retrieval, and clean integration. My work is driven by a focus on functional code and the rigorous application of machine learning paradigms.
+I am a Computer Science undergraduate focused on the design and implementation of intelligent systems. I build projects that prioritize modular architecture, conceptual data retrieval, and clean integration. My work is driven by the rigorous application of machine learning paradigms and scalable code design.
 
 ---
 
-## Technical Core
+## Technical Expertise
 
-| Category | Skills |
+| Category | Technologies |
 | :--- | :--- |
 | **Languages** | Python, SQL, C |
-| **AI Stack** | Sentence-Transformers, NumPy, Pandas, Scikit-learn |
-| **Development** | Git, Streamlit, REST APIs, SQLite |
+| **AI/ML** | Sentence-Transformers, NumPy, Pandas, Scikit-learn |
+| **Engineering** | Streamlit, Git, SQLite, REST APIs |
 
 ---
 
 ## Selected Projects
 
-**[Semantic Local Search](https://github.com/AiswaryaRJ/semantic-local-search)**
-*An engine for conceptual information retrieval.*
-*   **Engineering:** Built a custom retrieval pipeline using transformer-based embeddings and SQLite vector management.
-*   **Performance:** Replaced standard keyword matching with Cosine Similarity, enabling search based on meaning rather than string-matching.
+### [Semantic Local Search](https://github.com/AiswaryaRJ/semantic-local-search)
+*Context-aware information retrieval system.*
+* **Approach:** Engineered a custom retrieval pipeline utilizing transformer-based embeddings to map unstructured text into a 384-dimensional vector space.
+* **Mechanism:** Leveraged **Cosine Similarity** to enable conceptual matching, significantly improving relevance over traditional keyword-based search.
 
-**[Multi-Agent Research System](https://github.com/AiswaryaRJ/multi-agent-research-system)**
-*An automated workflow framework.*
-*   **Engineering:** Developed a multi-agent orchestration layer using Python to handle complex task delegation and state management.
-*   **Scalability:** Implemented a modular, multi-file structure to ensure the system is reproducible and easily extendable.
+### [Multi-Agent Research System](https://github.com/AiswaryaRJ/multi-agent-research-system)
+*Automated workflow engine for research aggregation.*
+* **Approach:** Designed a multi-agent framework in Python, focused on autonomous task delegation and robust state management.
+* **Architecture:** Structured as a modular, multi-file application to ensure scalability, reproducibility, and ease of future integration.
 
 ---
 
 ## Professional Presence
-
-*   **[LinkedIn](https://linkedin.com/in/aiswaryarosejacob)**
-*   **[Email](mailto:aiswaryarosejacob@email.com)**
+[LinkedIn](https://linkedin.com/in/aiswaryarosejacob)  •  [Email](mailto:aiswaryarosejacob@email.com)
 
 ---
 *Building systems with precision.*
